@@ -1,4 +1,4 @@
-const root = () => {
+const Myditails = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const root = () => {
     );
 };
 
-export default root;
+export default Myditails;

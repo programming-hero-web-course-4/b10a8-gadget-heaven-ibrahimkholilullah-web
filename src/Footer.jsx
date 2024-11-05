@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='py-10 w-[1280px] mx-auto'>
+        <div className='py-10 md:w-[1280px] mx-auto'>
             <div className='text-center border-b-2 pb-2'>
                 <h1 className='text-2xl font-bold py-2'>Gadget Heaven</h1>
                 <p>Leading the way in cutting-edge technology and innovation.</p>

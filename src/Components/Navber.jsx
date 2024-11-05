@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useLocation } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { GiSelfLove } from "react-icons/gi";
+import { parse } from 'postcss';
+import { getAllFavorit } from './CardCategories/CardJs';
+import { getAllWish } from './wishlist';
+import {navRenderContext} from './Root'
+import { useContext } from "react";
 
 const Navber = () => {
-  const location = useLocation();
 
+  const allFav = getAllFavorit();
+  const allWish = getAllWish();
+  const setNevrender = useContext(navRenderContext)
+
+
+  const returnLength = (arr) => {
+  
+       setNevrender(Math.random());
+       return arr.length
+  }
+
+    const location = useLocation();
   // Determine if the current path is home
   const isHome = location.pathname === '/';
 
@@ -46,7 +62,7 @@ const Navber = () => {
               {data}
             </ul>
           </div>
-          <a className={`btn btn-ghost text-xl ${textColor}`}>Gadget Heaven</a>
+          <a className={`btn btn-ghost md:text-xl ${textColor}`}>Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-5">
@@ -54,8 +70,18 @@ const Navber = () => {
           </ul>
         </div>
         <div className="navbar-end gap-4 mr-4">
-          <FaCartShopping size="30px" color={isHome ? 'white' : 'black'} />
+          <div className='relative'>
+          <FaCartShopping size="30px" color={isHome ? 'white' : 'black'}  />
+
+          <small className='absolute -top-5 -right-4 bg-slate-300 px-2 py-1 rounded-full'>{returnLength(allFav)}</small>
+          </div>
+          <div className='relative'>
           <GiSelfLove size="30px" color={isHome ? 'white' : 'black'} />
+
+          <small className='absolute -top-5 -right-4 bg-slate-300 px-2 py-1 rounded-full'>{returnLength(allWish)}</small>
+          </div>
+          
+          
         </div>
       </div>
     </div>

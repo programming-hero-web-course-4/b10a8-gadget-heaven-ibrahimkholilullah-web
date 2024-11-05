@@ -10,14 +10,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <BannerImg></BannerImg>
-            <div className='grid grid-cols-4'>
-                <div>
-                <CardCategories categories={categories}></CardCategories>
-                </div>
-                <div>
+            <CardCategories categories={categories}></CardCategories>
 
-                </div>
-            </div>
         </div>
     );
 };

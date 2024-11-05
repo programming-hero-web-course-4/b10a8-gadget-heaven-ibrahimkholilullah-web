@@ -1,6 +1,7 @@
+import { toast } from "react-toastify";
 
 const getAllWish = ()=>{
-    const all = localStorage.getItem("favorite")
+    const all = localStorage.getItem("wishlist")
     if(all){
         const favorite = JSON.parse(all)
         return favorite;
@@ -13,9 +14,12 @@ const getAllWish = ()=>{
 const addWishList = (coffee) =>{
     const favorite = getAllWish();
     const isExist = favorite.find(item => item.product_id === coffee.product_id)
-    if(isExist) return alert("all Ready Existed")
+    if(isExist) return toast.error("all Ready Existed")
     favorite.push(coffee);
-    localStorage.setItem('favorite', JSON.stringify(favorite))
+    localStorage.setItem('wishlist', JSON.stringify(favorite))
+     toast.success("Product added to favorites!",{
+        position:"top-left"
+    })
 }
 
 // removed 
@@ -23,7 +27,10 @@ const addWishList = (coffee) =>{
 const removedWishlist = (product_id) =>{
     const favorite = getAllWish();
     const remaining = favorite.filter(coffee => coffee.product_id != product_id);
-    localStorage.setItem('favorite', JSON.stringify(remaining))
+    localStorage.setItem('wishlist', JSON.stringify(remaining))
+    toast.success("Product removed from favorites!",{
+        position:"top-center"
+    })
 
 }
 

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import { NavLink, useLocation } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { GiSelfLove } from "react-icons/gi";
-import { parse } from 'postcss';
 import { getAllFavorit } from './CardCategories/CardJs';
 import { getAllWish } from './wishlist';
-import {navRenderContext} from './Root'
 import { useContext } from "react";
+import { navRenderContext } from "./Root";
 
 const Navber = () => {
 
@@ -34,7 +32,7 @@ const Navber = () => {
       <NavLink to="/" className={textColor}>Home</NavLink>
       <NavLink to="/statistics" className={textColor}>Statistics</NavLink>
       <NavLink to="/dashboard" className={textColor}>Dashboard</NavLink>
-      <NavLink to="/myditails" className={textColor}>My Details</NavLink>
+
     </>
   );
 
@@ -62,7 +60,7 @@ const Navber = () => {
               {data}
             </ul>
           </div>
-          <a className={`btn btn-ghost md:text-xl ${textColor}`}>Gadget Heaven</a>
+          <a className={`btn btn-ghost md:text-xl ${textColor}`}><NavLink to="/">Gadget Heaven</NavLink></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-5">
@@ -73,12 +71,12 @@ const Navber = () => {
           <div className='relative'>
           <FaCartShopping size="30px" color={isHome ? 'white' : 'black'}  />
 
-          <small className='absolute -top-5 -right-4 bg-slate-300 px-2 py-1 rounded-full'>{returnLength(allFav)}</small>
+          <small className='absolute -top-5 -right-4  px-2 py-1 rounded-full'>{returnLength(allFav)}</small>
           </div>
           <div className='relative'>
           <GiSelfLove size="30px" color={isHome ? 'white' : 'black'} />
 
-          <small className='absolute -top-5 -right-4 bg-slate-300 px-2 py-1 rounded-full'>{returnLength(allWish)}</small>
+          <small className='absolute -top-5 -right-4   px-2 py-1 rounded-full'>{returnLength(allWish)}</small>
           </div>
           
           

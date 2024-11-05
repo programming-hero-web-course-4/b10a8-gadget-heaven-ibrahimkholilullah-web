@@ -20,7 +20,7 @@ const addFacorited = (coffee) =>{
     favorite.push(coffee);
     localStorage.setItem('favorite', JSON.stringify(favorite))
     toast.success("Product added to favorites!",{
-        position:"top-center"
+        position:"top-left"
     })
 }
 
@@ -36,4 +36,13 @@ const removedFavorit = (product_id) =>{
 
 }
 
-export {addFacorited,getAllFavorit,removedFavorit}
+const removedFavoritAll = () =>{
+    const remaining = []
+    localStorage.setItem('favorite', JSON.stringify(remaining))
+    toast.success("all Product have been purchase!",{
+        position:"top-center"
+    })
+
+}
+
+export {addFacorited,getAllFavorit,removedFavorit, removedFavoritAll}

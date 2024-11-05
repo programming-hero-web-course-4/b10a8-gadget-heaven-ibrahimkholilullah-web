@@ -1,18 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getAllFavorit, removedFavorit } from './Components/CardCategories/CardJs';
+import { addFacorited, getAllFavorit, removedFavorit, removedFavoritAll } from './Components/CardCategories/CardJs';
 import AddtoCard from './AddtoCard';
 import { getAllWish, removedWishlist } from './Components/wishlist';
 import WishList from './WishList';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import sucess from "../src/Components/Image/Group.png"
+
 const Dashboard = () => {
+    const navigate = useNavigate();
     const allData = useLoaderData()
     const [addCard , setAddCard] = useState(allData);
     const [addWish , setWishAdd] = useState([])
-    const [addPrice, setAddPrice] = useState(0)
-     
+
     useEffect(()=>{
         const favorited = getAllFavorit();
         setAddCard(favorited)
@@ -35,14 +36,25 @@ const Dashboard = () => {
 
    const handleSort = sorting =>{
     if(sorting === 'price'){
-        const newArray = [...addCard].sort((a,b) => b.price - a.price);
+        const newArray = [...addCard].sort((a,b) => a.price - b.price);
         setAddCard(newArray)
     }
    }
-   const clearStpregData = () =>{
-    localStorage.clear();
-    alert("All clerar")
+
+   const cartTotlaPrice = () => {
+    let count = 0;
+    addCard.forEach(
+      product => count += product.price
+    )
+    return Math.round(count);
    }
+
+   const clearPurchase = () => {
+     setAddCard([]) 
+     removedFavoritAll()
+     navigate("/")
+   }
+   
     return (
         <div>
             <div className='text-center pt-2 bg-[#9538E2] text-white pb-10'>
@@ -52,14 +64,14 @@ const Dashboard = () => {
         
                 <Tabs className="my-2 text-center -mt-4 ">
                 <TabList className="border-none bg-[#9538E2] pb-16">
-                 <Tab className="btn btn-wide border-2 ml-2 mb-2 md:mb-0 rounded-full mt-8 text-white bg-[#9538E2]">Card</Tab>
+                 <Tab className="btn btn-wide border-2 ml-2 mb-2 md:mb-0 rounded-full mt-8 text-white bg-[#9538E2]" onClick={()=>null}>Card</Tab>
                  <Tab className="btn btn-wide border-2 ml-2 rounded-full bg-[#9538E2] text-white">Wishlist</Tab>
                 </TabList>
                 <TabPanel className="text-left mt-12">
                 <div className='md:flex justify-between text-center md:text-left items-center'>
                 <h1 className="text-xl font-bold">Card</h1>
                 <div className='md:flex items-center gap-4'>
-                    <p className='font-bold'>Totel Prices : $ {addPrice}</p>
+                    <p className='font-bold'>Totel Prices : $ {cartTotlaPrice()}</p>
                     <div>
                     <button onClick={()=> handleSort("price")} className='btn border-[#9538E2] bg-white rounded-full text-[#9538E2]'>Sort By Price</button>
                     <button className='btn bg-[#9538E2] text-white rounded-full ml-2' onClick={()=>document.getElementById('my_modal_5').showModal()}>Purchase</button>
@@ -70,11 +82,11 @@ const Dashboard = () => {
                                 <img className='mx-auto my-2' src={sucess} alt="" />
                                <h3 className="font-bold text-lg">Payment Successfully!</h3>
                                <p className="py-4">Thanks for purchasing. <br />
-                               Total:2449.96</p>
+                               Total:{cartTotlaPrice()}</p>
                                <div className=" w-full">
                                  <form className='w-full' method="dialog">
                                    {/* if there is a button in form, it will close the modal */}
-                                   <button className="btn w-full bg-[#9538E2] text-white">Close</button>
+                                   <button  className="btn w-full bg-[#9538E2] text-white" onClick={clearPurchase}>Close</button>
                                  </form>
                                </div>
                              </div>
@@ -92,7 +104,7 @@ const Dashboard = () => {
                <h1 className="text-xl font-bold">Wishlist</h1>
                  <div>
                     {
-                        addWish.map(wish => <WishList wishRemoves={wishRemoves} key={wish.product_id} wish={wish}></WishList>)
+                        addWish.map(wish => <WishList addCard={addCard} setAddCard={setAddCard} wishRemoves={wishRemoves} key={wish.product_id} wish={wish}></WishList>)
                     }
                  </div>
                </TabPanel>

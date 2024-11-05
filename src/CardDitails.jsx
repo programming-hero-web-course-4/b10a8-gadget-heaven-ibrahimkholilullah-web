@@ -6,8 +6,6 @@ import { addFacorited } from './Components/CardCategories/CardJs';
 import { addWishList } from './Components/wishlist';
 
 const CardDitails = () => {
-
-    
     const loadData = useLoaderData()
     const {product_id} = useParams()
     const [cardData, setCardData] = useState({})
@@ -20,14 +18,12 @@ const CardDitails = () => {
         const singleWish = loadData.find(card => card.product_id == product_id)
         setWishData(singleWish)
     },[loadData, product_id])
-    const {rating,product_id: carrendId,Specification,description,price,product_image,product_title,category} = cardData || wishAdd;
-
-    console.log(Specification)
-
+    const {rating,product_id: carrendId,description,price,product_image,product_title,category,specification} = cardData || wishAdd;
   const handleFavorited = cardData =>{
     addFacorited(cardData)
 }
 const handleWish = wishAdd =>{
+
     addWishList(wishAdd)
    }
 
@@ -49,15 +45,13 @@ const handleWish = wishAdd =>{
                     <p className="my-2">Category : <button className="btn btn-sm bg-white rounded-full ml-4 border-[#309C08] text-[#309C08]">{category}</button></p>
                     <p className="text-lg">{description}</p>
                      <p className="text-lg font-bold my-3">Specification : </p>
-                     {/* <div>
-                     <ul>
-                        {
-                            Specification.map((config,index) => (<li className="list-disc  ml-5" key={index} >{config}</li>))
-                        }
-                     </ul>
-                     </div> */}
+                        {/* {
+                            specification.map((config) => (
+                            <li className="list-disc  ml-5" key={index} >{config}</li>)
+                        )
+                        } */}
                     <div>
-                        <p className=" font-bold my-2">Rating : <span className="text-[#F9C004] ml-4"><i class="fa-regular fa-star text-[#F9C004] "></i></span></p>
+                        <p className=" font-bold my-2">Rating : <span className="text-[#F9C004] ml-4"><i className="fa-regular fa-star text-[#F9C004] "></i></span></p>
                         <div className="rating rating-sm">
                             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                             <input

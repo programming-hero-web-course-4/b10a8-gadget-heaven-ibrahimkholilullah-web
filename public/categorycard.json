@@ -17,7 +17,7 @@
       "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE5TvDIuh6YnU5pruOfq3TtlvtR2O7Z7M2Ug&s",
       "price": 1199.99,
       "description": "2-in-1 laptop with a 360-degree hinge and a vibrant display.",
-      "Specification": ["Intel Core i7","16GB", "1TB SSD","13.3-inch 4K UHD"],
+      "specification": ["Intel Core i7","16GB", "1TB SSD","13.3-inch 4K UHD"],
       "availability": true,
       "rating": 4.5
   },
@@ -28,7 +28,7 @@
       "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeRbCQwqua53_aXw9eJ9nqHrRPpZ_ZLoN7xw&s",
       "price": 1099.99,
       "description": "Flagship iPhone with advanced camera and A16 Bionic chip.",
-      "Specification": ["A16 Bionic","6GB","256GB","6.1-inch OLED"],
+      "specification": ["A16 Bionic","6GB","256GB","6.1-inch OLED"],
       "availability": true,
       "rating": 4.8
   },
@@ -39,7 +39,7 @@
       "product_image": "https://1000fix.com/wp-content/uploads/2022/07/Samsung-Galaxy-S22-Ultra-image-600x508.webp",
       "price": 899.99,
       "description": "Premium Android phone with a powerful processor and excellent display.",
-      "Specification": ["Snapdragon 8 Gen 1",  "8GB",  "256GB",  "6.2-inch AMOLED"],
+      "specification": ["Snapdragon 8 Gen 1",  "8GB",  "256GB",  "6.2-inch AMOLED"],
       "availability": true,
       "rating": 4.6
   },
@@ -50,7 +50,7 @@
       "product_image": "https://images-cdn.ubuy.co.in/6627a3d601c0536133544916-jbl-flip-6-portable-bluetooth.jpg",
       "price": 129.99,
       "description": "Portable Bluetooth speaker with impressive sound quality.",
-      "Specification": ["12 hours","IPX7","Black"],
+      "specification": ["12 hours","IPX7","Black"],
       "availability": true,
       "rating": 4.7
   },
@@ -61,7 +61,7 @@
       "product_image": "https://shop.deximpo.com.bd/wp-content/uploads/2023/05/Deximpo-Anker-BangladeshAnker-PowerCore-Select-20000-Black.jpg",
       "price": 49.99,
       "description": "High-capacity power bank for charging devices on the go.",
-      "Specification": ["20000mAh","2 USB-A","Black"],
+      "specification": ["20000mAh","2 USB-A","Black"],
       "availability": true,
       "rating": 4.8
   },
@@ -72,7 +72,7 @@
       "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Apple-Watch-Series-8-GPS+Cellular-Midnight-4171.jpg",
       "price": 399.99,
       "description": "Advanced health-tracking features with a sleek design.",
-      "Specification": ["45mm", "32GB", "18 hours",   "50 meters"],
+      "specification": ["45mm", "32GB", "18 hours",   "50 meters"],
       "availability": true,
       "rating": 4.9
   },
@@ -83,7 +83,7 @@
       "product_image": "https://www.custommacbd.com/cdn/shop/products/GalaxyWatch5-blue-custom-ma-bd.jpg?v=1661494309",
       "price": 279.99,
       "description": "Feature-rich smartwatch with a circular AMOLED display.",
-      "Specification": ["44mm","16GB", "40 hours", "IP68"],
+      "specification": ["44mm","16GB", "40 hours", "IP68"],
       "availability": true,
       "rating": 4.6
   },
@@ -94,7 +94,7 @@
       "product_image": "https://i0.wp.com/kryinternational.com/wp-content/uploads/2024/03/Macbook-Air-M2-price.jpg?fit=773%2C776&ssl=1",
       "price": 1199.99,
       "description": "Thin and light laptop powered by the Apple M2 chip.",
-      "Specification": [ "Apple M2","8GB", "256GB SSD", "13.6-inch Liquid Retina"],
+      "specification": [ "Apple M2","8GB", "256GB SSD", "13.6-inch Liquid Retina"],
       "availability": true,
       "rating": 4.8
   },
@@ -105,7 +105,7 @@
       "product_image": "https://www.apple.com/newsroom/images/product/mac/standard/Apple_MacBook-Pro_14-16-inch_10182021_big.jpg.large.jpg",
       "price": 1999.99,
       "description": "High-performance MacBook Pro with M1 Pro chip for power users.",
-      "Specification": [ "Apple M1 Pro", "16GB","512GB SSD","14.2-inch Liquid Retina XDR"],
+      "specification": [ "Apple M1 Pro", "16GB","512GB SSD","14.2-inch Liquid Retina XDR"],
       "availability": true,
       "rating": 4.9
   }

@@ -5,7 +5,6 @@ import { createContext, useState } from "react";
 
 export const navRenderContext = createContext(0);
 
-
 const Root = () => {
     const [navrender, setNevrender] = useState(0)
 
@@ -13,11 +12,12 @@ const Root = () => {
         <div className="container mx-auto">
             
                 <navRenderContext.Provider value={setNevrender}>
+               
                 <Navber></Navber>
                    <div className="min-h-[calc(100vh-232px)]">
-                   <Outlet setNevrender={setNevrender} ></Outlet>
+                   <Outlet ></Outlet>
                    </div>
-            <Footer></Footer>
+                   <Footer></Footer>
                 </navRenderContext.Provider>
            
         </div>

@@ -7,19 +7,19 @@ import {
 import "./index.css";
 import Root from "./Components/Root";
 import Home from "./Home";
+import Error from "./Error";
 import Dashboard from "./Dashboard";
 import CardDitails from "./CardDitails";
 import Statistics from "./Statistics";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import PersinalInfo from "./PersinalInfo";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement:<Error></Error>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:"/",
@@ -40,7 +40,8 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element:<Dashboard></Dashboard>,
         loader:() => fetch("/categorycard.json")
-      }
+      },
+     
     ]
   },
 ]);

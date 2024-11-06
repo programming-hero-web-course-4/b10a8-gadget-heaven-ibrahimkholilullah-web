@@ -31,8 +31,7 @@ const Navber = () => {
     <>
       <NavLink to="/" className={textColor}>Home</NavLink>
       <NavLink to="/statistics" className={textColor}>Statistics</NavLink>
-      <NavLink to="/dashboard" className={textColor}>Dashboard</NavLink>
-
+      <NavLink to="/dashboard" className={textColor}>Dashboard</NavLink>      
     </>
   );
 

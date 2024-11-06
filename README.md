@@ -1,8 +1,15 @@
-# React + Vite
+# B10 A8 Solve
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# *** ○ List of React Fundamental concepts used in the project
+Gadget Heaven এই প্রজেক্ট এর মাঝে দেখানো হয়েছে যে এখানে অনেক ক্যাটাগরির প্রোডাক্ট রয়েছে যার যেটা প্রয়োজন সে সেটাই এখান থেকে কিনতে পারবে। এখানে অনেকগুলো অপশন আছে যেমন MacBook, Laptops ইত্যাদি রয়েছে যেখানে ক্লিক করলে যে প্রোডাক্ট গুলো আছে কিনা  তাকে দেখাবে এবং কোন জায়গায় যদি কোন প্রোডাক্ট না থাকে তাহলে তাকে সেখানে নো ডাটা দেখাবে আর কোন প্রোডাক্ট এর ডিটেলসে ক্লিক করে তাহলে সে প্রোডাক্টের সমস্ত ডিটেলস তার কাছে শো করবে আর নিচে এড কার্ড বাটন আছে ওখানে ক্লিক করলে ড্যাশবোর্ডের কার্ডে এড হবে আর লাভ বাটনে ক্লিক করলে wishlist ডাটা এড হবে। কেউ যদি চায় পরবর্তীতে সে wishlist থেকে প্রোডাক্টটা কে কার্ডে এড করবে সেট করতে পারবে। আরো অনেক ধরনের কাজ এই ওয়েব সাইটে করা হয়েছে।
 
-Currently, two official plugins are available:
+# What you have used for handling and managing data (context API/local storage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Local Storage.
+
+# ○ 5 features of your website/project
+1. Navber যখন থাকবে তখন তার ব্যাকগ্রাউন্ড থাকবে আকাশি কালার আর অন্য পাথে গেলে Navber  ব্যাকগ্রাউন্ড শাদা হয়ে যাবে. 
+2. Navber and footer   সবসময়ই ফিক্সড থাকবে এদের কোন পরিবর্তন হবে না কিন্তু ভিতরে যে ডকুমেন্টগুলো থাকবে সেগুলো তার পাত অনুযায়ী পরিবর্তন হবে। 
+3. Statistics এই পেজের মাঝে প্রত্যেকটা প্রোডাক্ট এর প্রাইস এবং ক্যাটাগরি অনুযায়ী কি রকম পোডাক্ট সেটা বোঝানো হয়েছে। 
+4. যখন আমরা ড্যাশ বোর্ডে কার্ডগুলো এড করি তখন প্রত্যেকটি ডাটার  ডান পাশে একটি ডিলিট বাটন অ্যাড করা হয়েছে যেখানে ক্লিক করলে সে ডাকাটা ডিলিট হয়ে যাবে। 
+5. ড্যাশবোর্ডের মাধ্যমে Sorting ক্লিক করলে কম প্রাইস থেকে শো করবে এবং পারচেজ বাটনে ক্লিক করলে কাঠ কন্টেইনারে যে কার্ডগুলো এড করা হয়েছিল  সে সবগুলোকে রিমুভ করে দেবে।
